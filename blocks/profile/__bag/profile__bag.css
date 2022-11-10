@@ -1,0 +1,4 @@
+.profile__bag {
+    display: flex;
+    gap: 30px;
+}

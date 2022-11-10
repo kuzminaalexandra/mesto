@@ -1,0 +1,12 @@
+.profile__edit-button {
+    padding: 0;
+    background: #000;
+    background-image: url(../../../images/button-pen.svg);
+    min-height: 24px;
+    background-position: center;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    border: solid #fff 1px;
+    align-self: flex-end;
+    transform: translate(0, -3px);
+}
