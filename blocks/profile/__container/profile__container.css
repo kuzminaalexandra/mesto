@@ -2,3 +2,9 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 350px) {
+    .profile__container {
+        max-width: 282px;
+    }
+}

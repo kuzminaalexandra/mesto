@@ -5,3 +5,11 @@
     font-weight: 500;
     transform: translate(0, 6px);
 }
+
+@media screen and (max-width: 350px) {
+    .profile__title {
+        font-size: 27px;
+        line-height: 32.68px;
+        transform: translate(15px, 0);
+    }
+}

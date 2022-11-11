@@ -7,3 +7,16 @@
     max-width: 880px;
     margin: 40px auto 0;
 }
+
+@media screen and (max-width: 645px) {
+    .profile {
+        flex-direction: column;
+        gap: 36px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .profile {
+        margin-top: 42px;
+    }
+}

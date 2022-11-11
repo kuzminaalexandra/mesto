@@ -7,5 +7,20 @@
     background-repeat: no-repeat;
     background-position: center;
     object-fit: contain;
-    border: solid #fff 1px;
+    border: solid #fff 2px;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 645px) {
+    .profile__add-button {
+        background-image: url(../../../images/button-plus-mobile.svg);
+        min-width: 282px;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .profile__add-button {
+        transform: translate(0, -9px);
+    }
 }

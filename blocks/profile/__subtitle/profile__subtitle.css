@@ -5,3 +5,17 @@
     font-weight: 400;
     transform: translate(0, -2px);
 }
+
+@media screen and (max-width: 495px) {
+    .profile__subtitle {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .profile__subtitle {
+        font-size: 14px;
+        line-height: 16.94px;
+        transform: translate(14px, -4px);
+    }
+}

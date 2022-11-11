@@ -10,3 +10,12 @@
     align-self: flex-end;
     transform: translate(0, -3px);
 }
+
+
+@media screen and (max-width: 350px) {
+    .profile__edit-button {
+        min-height: 18px;
+        align-self: center;
+        transform: translate(11px, -1px);
+    }
+}
