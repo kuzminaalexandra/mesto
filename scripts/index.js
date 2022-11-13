@@ -14,14 +14,21 @@ console.log(popupOpenButtonElement);
 //     popupElement.classList.toggle('popup__is-opened');
 // }
 
-const openPopup = function () {
-         popupElement.classList.add('popup__is-opened');
-         console.log('Open popup clicked');
+const openPopup = function (event) {
+    popupElement.classList.add('popup__is-opened');
+    console.log('Open popup clicked');
 }
 
 const closePopup = function () {
     popupElement.classList.remove('popup__is-opened');
-    console.log('Close popup clicked');
+}
+
+const closePopupByClickOnOverlay = function (event) {
+    console.log(event.target, event.currentTarget);
+    if (event.target !== event.currentTarget) {
+        return;
+    }
+    closePopup();
 }
 
 
@@ -31,3 +38,4 @@ const closePopup = function () {
 
 popupOpenButtonElement.addEventListener('click', openPopup);
 popupCloseButtonElement.addEventListener('click', closePopup);
+popupElement.addEventListener('click', closePopupByClickOnOverlay)
