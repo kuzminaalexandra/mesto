@@ -1,5 +1,5 @@
 // Проверка работы скрипта
-console.log("Hello world!");
+console.log("Js - это пипец");
 
 // Выборка DOM-элементов
 const popupElement = document.querySelector('.popup');
@@ -31,7 +31,6 @@ const closePopupByClickOnOverlay = function (event) {
     closePopup();
 }
 
-
 // togglePopupVisibility();
 
 // Регистрация обработчика событий по клику
@@ -39,3 +38,15 @@ const closePopupByClickOnOverlay = function (event) {
 popupOpenButtonElement.addEventListener('click', openPopup);
 popupCloseButtonElement.addEventListener('click', closePopup);
 popupElement.addEventListener('click', closePopupByClickOnOverlay)
+
+let formElement = popupElement.querySelector('.popup__container');
+let nameInput = popupElement.querySelector('.popup__name');
+let jobInput = popupElement.querySelector('.popup__profession');
+
+//Обработка отправки формы
+function formSubmitHandler(evt) {
+    evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы. И происходит какая-то дикая херота....
+}
+// Получение значений полей jobInput и nameInput из свойства value
+
+
