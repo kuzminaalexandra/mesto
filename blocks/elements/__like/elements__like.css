@@ -9,4 +9,10 @@
     border: none;
     align-self: center;
     transform: translate(-5px);
+    transition: opacity 0.5s linear;
+}
+
+.elements__like:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }

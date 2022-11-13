@@ -9,6 +9,7 @@
     object-fit: contain;
     border: solid #fff 2px;
     border-radius: 3px;
+    transition: opacity 0.5s linear;
 }
 
 @media screen and (max-width: 645px) {
@@ -23,4 +24,9 @@
     .profile__add-button {
         transform: translate(0, -9px);
     }
+}
+
+.profile__add-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }

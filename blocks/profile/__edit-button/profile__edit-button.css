@@ -9,6 +9,7 @@
     border: solid #fff 1px;
     align-self: flex-end;
     transform: translate(0, -3px);
+    transition: opacity 0.5s linear;
 }
 
 
@@ -18,4 +19,9 @@
         align-self: center;
         transform: translate(11px, -1px);
     }
+}
+
+.profile__edit-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
