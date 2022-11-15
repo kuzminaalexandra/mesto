@@ -8,11 +8,3 @@
     white-space: nowrap;
     overflow: hidden;
 }
-
-@media screen and (max-width: 450px) {
-    .elements__paragraph {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16.94px;
-    }
-}

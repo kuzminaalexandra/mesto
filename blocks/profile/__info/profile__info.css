@@ -9,7 +9,8 @@
 @media screen and (max-width: 350px) {
     .profile__info {
         grid-template-columns: 1fr 18px;
-        grid-gap: 10px 14px;
+        grid-gap: 14px 10px;
         align-self: flex-start;
+        transform: translate(46px, 0);
     }
 }

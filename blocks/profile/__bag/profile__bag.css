@@ -12,5 +12,6 @@
 @media screen and (max-width: 350px) {
     .profile__bag {
         gap: 26px;
+        min-width: 282px;
     }
 }
