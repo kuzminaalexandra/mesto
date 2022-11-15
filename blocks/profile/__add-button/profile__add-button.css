@@ -7,5 +7,20 @@
     background-repeat: no-repeat;
     background-position: center;
     object-fit: contain;
-    border: solid #fff 1px;
+    border: solid #fff 2px;
+    border-radius: 3px;
+    transition: opacity 0.5s linear;
+}
+
+@media screen and (max-width: 645px) {
+    .profile__add-button {
+        background-image: url(../../../images/button-plus-mobile.svg);
+        min-width: 282px;
+        align-self: center;
+    }
+}
+
+.profile__add-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }

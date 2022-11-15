@@ -3,5 +3,20 @@
     font-size: 18px;
     line-height: 21.78px;
     font-weight: 400;
-    transform: translate(0, -2px);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 495px) {
+    .profile__subtitle {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .profile__subtitle {
+        font-size: 14px;
+        line-height: 16.94px;
+    }
 }

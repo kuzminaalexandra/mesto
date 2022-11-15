@@ -7,6 +7,18 @@
     object-fit: contain;
     background-repeat: no-repeat;
     border: solid #fff 1px;
-    align-self: flex-end;
-    transform: translate(0, -3px);
+    align-self: center;
+    transition: opacity 0.5s linear;
+}
+
+
+@media screen and (max-width: 350px) {
+    .profile__edit-button {
+        min-height: 18px;
+    }
+}
+
+.profile__edit-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
