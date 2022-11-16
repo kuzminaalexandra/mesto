@@ -1,5 +1,6 @@
 .profile__subtitle {
     margin: 0;
+    max-width: 294px;
     font-size: 18px;
     line-height: 21.78px;
     font-weight: 400;
@@ -18,5 +19,6 @@
     .profile__subtitle {
         font-size: 14px;
         line-height: 16.94px;
+        max-width: 189px;
     }
 }
