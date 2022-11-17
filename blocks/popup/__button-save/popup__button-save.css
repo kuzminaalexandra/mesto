@@ -7,7 +7,7 @@
     border-radius: 2px;
     font-weight: 400;
     font-size: 18px;
-    line-height: 21.78px;
+    line-height: 22px;
     transition: opacity 0.5s linear;
 }
 
@@ -15,7 +15,7 @@
     .popup__button-save {
         min-height: 46px;
         font-size: 14px;
-        line-height: 16.94px;
+        line-height: 17px;
     }
 }
 
