@@ -8,16 +8,15 @@
   margin: 0;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 930px) {
   .elements__container {
-    max-width: 288px;
-    margin-top: 16px;
-    margin: 0 auto;
+    max-width: calc(100vw - 38px);
+    margin: 16px auto 0;
   }
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 315px) {
   .elements__container {
-    grid-template-columns: 282px;
+    max-width: 100%;
   }
 }

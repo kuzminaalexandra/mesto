@@ -3,7 +3,7 @@
     min-width: 150px;
     min-height: 50px;
     background: #000;
-    background-image: url(../../../images/button-plus.png);
+    background-image: url(../../../images/button-plus.svg);
     background-repeat: no-repeat;
     background-position: center;
     object-fit: contain;
@@ -12,7 +12,7 @@
     transition: opacity 0.5s linear;
 }
 
-@media screen and (max-width: 645px) {
+@media screen and (max-width: 680px) {
     .profile__add-button {
         background-image: url(../../../images/button-plus-mobile.svg);
         min-width: 282px;
@@ -21,6 +21,6 @@
 }
 
 .profile__add-button:hover {
-    opacity: 0.8;
+    opacity: 0.6;
     cursor: pointer;
 }

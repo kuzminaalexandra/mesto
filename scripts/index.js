@@ -1,5 +1,5 @@
 // Проверка работы скрипта
-console.log('Js - это пипец');
+console.log('Js - это не пипец) Учитель говорит, у меня отлично получается)) Александр, спасибо за ревью!');
 
 // Выборка DOM-элементов
 const popupElement = document.querySelector('.popup');
@@ -25,11 +25,9 @@ const closePopup = function () {
 
 // Закрытие попапа при клике на пространстве за рамками попапа
 const closePopupByClickOnOverlay = function (event) {
-    console.log(event.target, event.currentTarget);
-    if (event.target !== event.currentTarget) {
-        return;
+    if (event.target === event.currentTarget) {
+        closePopup();
     }
-    closePopup();
 }
 
 //Обработка отправки введенных в попап данных
@@ -40,6 +38,7 @@ function formSubmitHandler(evt) {
     closePopup();
 }
 
+//Подключение слушателей
 popupOpenButtonElement.addEventListener('click', openPopup);
 popupCloseButtonElement.addEventListener('click', closePopup);
 popupElement.addEventListener('click', closePopupByClickOnOverlay);
