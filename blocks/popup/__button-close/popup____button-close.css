@@ -5,7 +5,7 @@
     padding: 0;
     width: 32px;
     height: 32px;
-    background-color: #000;
+    background-color: unset;
     background-image: url(../../../images/button-close.png);
     object-fit: cover;
     background-repeat: no-repeat;
