@@ -9,7 +9,6 @@
     border: none;
     align-self: center;
     transition: opacity 0.5s linear;
-    transform: translate(-4px, 2px);
 }
 
 .elements__like:hover {
