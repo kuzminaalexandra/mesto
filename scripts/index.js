@@ -30,7 +30,7 @@ const initialCards = [
 ];
 
 // Выборка элементов попапа профиля
-const popupElement = document.querySelector('.popup');
+const popupElement = document.querySelector('#popup-profile');
 const popupCloseButtonElement = popupElement.querySelector('.popup__button-close');
 const formElement = popupElement.querySelector('.popup__content');
 const nameInput = popupElement.querySelector('.popup__name');
