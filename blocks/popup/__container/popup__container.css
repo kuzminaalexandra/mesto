@@ -3,13 +3,13 @@
     max-width: 430px;
     min-height: 330px;
     background: #fff;
-    align-self: center;
     border-radius: 10px;
     position: relative;
     display: flex;
     flex-direction: column;
     padding-left: 36px;
     padding-right: 36px;
+    align-items: center;
 }
 
 @media screen and (max-width: 450px) {
