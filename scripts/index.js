@@ -81,8 +81,7 @@ function closePopup(popupItem) {
     popupItem.classList.remove('popup__is-opened');
 };
 
-//Функция отправки введенных в попап профиля данных
-function formSubmitHandler(evt) {
+//Функция отправки введенных в попап профиля handleProfileFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
     profileProfession.textContent = professionInput.value;
@@ -137,14 +136,6 @@ initialCards.forEach(function (item) {
     renderCard(item.name, item.link);
 });
 
-//Функция отправки введенных в попап профиля данных
-function formSubmitHandler(evt) {
-    evt.preventDefault();
-    profileName.textContent = nameInput.value;
-    profileProfession.textContent = professionInput.value;
-    closePopup(popupElement);
-};
-
 //СЛУШАТЕЛИ
 //Открытие попапов
 popupAddButtonElement.addEventListener('click', openPopupPhotoCard);
@@ -155,7 +146,7 @@ popupOpenButtonElement.addEventListener('click', () => {
 });
 
 //Сохранение данных
-popupElement.addEventListener('submit', formSubmitHandler);
+popupElement.addEventListener('submit', handleProfileFormSubmit);
 
 popupPhotoElement.addEventListener('submit', function (evt) {
     evt.preventDefault();
