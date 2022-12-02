@@ -31,7 +31,7 @@ const initialCards = [
 
 // Выборка элементов попапа профиля
 const popupElement = document.querySelector('#popup-profile');
-const popupCloseButtonElement = popupElement.querySelector('.popup__button-close');
+const popupsCloseButtonElements = document.querySelectorAll('.popup__button-close');
 const formElement = popupElement.querySelector('.popup__content');
 const nameInput = popupElement.querySelector('.popup__name');
 const professionInput = popupElement.querySelector('.popup__profession');
@@ -46,7 +46,6 @@ const profileName = document.querySelector('.profile__title');
 const popupPhotoElement = document.querySelector('#popup-photo-card');
 const photoName = popupPhotoElement.querySelector('#popup__photo-name');
 const photoLink = popupPhotoElement.querySelector('#popup__photo-link');
-const popupPhotoElementCloseButton = popupPhotoElement.querySelector('.popup__button-close');
 const formPhotoElement = popupPhotoElement.querySelector('#popup-photo-content');
 
 // Выборка элементов общего контейнера карточек
@@ -58,7 +57,6 @@ const photoCardElement = document.querySelector('.elements__photo');
 
 // Выборка элементов блока профиля
 const openPopupPhotoZoom = document.querySelector('#popup-photo-card-zoom');
-const popupPhotoZoomClose = openPopupPhotoZoom.querySelector('.popup__button-close');
 
 // Открытие попапа редактирования профиля
 function openPopup(popupItem) {
@@ -81,7 +79,8 @@ function closePopup(popupItem) {
     popupItem.classList.remove('popup__is-opened');
 };
 
-//Функция отправки введенных в попап профиля handleProfileFormSubmit(evt) {
+//Функция отправки введенных в попап профиля 
+function handleProfileFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
     profileProfession.textContent = professionInput.value;
@@ -156,14 +155,8 @@ popupPhotoElement.addEventListener('submit', function (evt) {
 });
 
 //Закрытие попапов
-popupCloseButtonElement.addEventListener('click', function () {
-    closePopup(popupElement);
-});
 
-popupPhotoElementCloseButton.addEventListener('click', function () {
-    closePopup(popupPhotoElement);
-});
-
-popupPhotoZoomClose.addEventListener('click', function () {
-    closePopup(openPopupPhotoZoom);
+popupsCloseButtonElements.forEach((button) => {
+const popup = button.closest('.popup');
+button.addEventListener('click', () => closePopup(popup));
 });
