@@ -81,7 +81,8 @@ function closePopup(popupItem) {
     popupItem.classList.remove('popup__is-opened');
 };
 
-//Функция отправки введенных в попап профиля handleProfileFormSubmit(evt) {
+//Функция отправки введенных в попап профиля 
+const handleProfileFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
     profileProfession.textContent = professionInput.value;
