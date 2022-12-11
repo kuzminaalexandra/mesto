@@ -29,9 +29,11 @@ const initialCards = [
     }
 ];
 
+//Общая константа для всех кнопок закрытия попапов
+const closePopupsButtons = document.querySelectorAll('.popup__button-close');
+
 // Выборка элементов попапа профиля
 const popupElement = document.querySelector('#popup-profile');
-const popupsCloseButtonElements = document.querySelectorAll('.popup__button-close');
 const formElement = popupElement.querySelector('.popup__content');
 const nameInput = popupElement.querySelector('.popup__name');
 const professionInput = popupElement.querySelector('.popup__profession');
@@ -109,7 +111,7 @@ function generateCard(placeName, link) {
         popupPhotoZoomSubtitle.textContent = placeName;
         openPopup(openPopupPhotoZoom);
     });
-    
+
     trashBin.addEventListener('click', deletePhotoCard);
 
     return addPhotoContainer;
@@ -135,6 +137,12 @@ initialCards.forEach(function (item) {
     renderCard(item.name, item.link);
 });
 
+//Универсальная функия закрытия всех попапов
+closePopupsButtons.forEach((button) => {
+    const popup = button.closest('.popup');
+    button.addEventListener('click', () => closePopup(popup));
+});
+
 //СЛУШАТЕЛИ
 //Открытие попапов
 popupAddButtonElement.addEventListener('click', openPopupPhotoCard);
@@ -152,11 +160,4 @@ popupPhotoElement.addEventListener('submit', function (evt) {
     renderCard(photoName.value, photoLink.value);
     formPhotoElement.reset();
     closePopup(popupPhotoElement);
-});
-
-//Закрытие попапов
-
-popupsCloseButtonElements.forEach((button) => {
-const popup = button.closest('.popup');
-button.addEventListener('click', () => closePopup(popup));
 });
