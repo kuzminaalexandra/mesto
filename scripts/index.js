@@ -29,9 +29,11 @@ const initialCards = [
     }
 ];
 
+//Общая константа для всех кнопок закрытия попапов
+const closePopupsButtons = document.querySelectorAll('.popup__button-close');
+
 // Выборка элементов попапа профиля
 const popupElement = document.querySelector('#popup-profile');
-const popupCloseButtonElement = popupElement.querySelector('.popup__button-close');
 const formElement = popupElement.querySelector('.popup__content');
 const nameInput = popupElement.querySelector('.popup__name');
 const professionInput = popupElement.querySelector('.popup__profession');
@@ -46,7 +48,6 @@ const profileName = document.querySelector('.profile__title');
 const popupPhotoElement = document.querySelector('#popup-photo-card');
 const photoName = popupPhotoElement.querySelector('#popup__photo-name');
 const photoLink = popupPhotoElement.querySelector('#popup__photo-link');
-const popupPhotoElementCloseButton = popupPhotoElement.querySelector('.popup__button-close');
 const formPhotoElement = popupPhotoElement.querySelector('#popup-photo-content');
 
 // Выборка элементов общего контейнера карточек
@@ -58,7 +59,6 @@ const photoCardElement = document.querySelector('.elements__photo');
 
 // Выборка элементов блока профиля
 const openPopupPhotoZoom = document.querySelector('#popup-photo-card-zoom');
-const popupPhotoZoomClose = openPopupPhotoZoom.querySelector('.popup__button-close');
 
 // Открытие попапа редактирования профиля
 function openPopup(popupItem) {
@@ -82,7 +82,7 @@ function closePopup(popupItem) {
 };
 
 //Функция отправки введенных в попап профиля 
-const handleProfileFormSubmit(evt) {
+    function handleProfileFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
     profileProfession.textContent = professionInput.value;
@@ -111,7 +111,7 @@ function generateCard(placeName, link) {
         popupPhotoZoomSubtitle.textContent = placeName;
         openPopup(openPopupPhotoZoom);
     });
-    
+
     trashBin.addEventListener('click', deletePhotoCard);
 
     return addPhotoContainer;
@@ -137,6 +137,12 @@ initialCards.forEach(function (item) {
     renderCard(item.name, item.link);
 });
 
+//Универсальная функия закрытия всех попапов
+closePopupsButtons.forEach((button) => {
+    const popup = button.closest('.popup');
+    button.addEventListener('click', () => closePopup(popup));
+});
+
 //СЛУШАТЕЛИ
 //Открытие попапов
 popupAddButtonElement.addEventListener('click', openPopupPhotoCard);
@@ -154,17 +160,4 @@ popupPhotoElement.addEventListener('submit', function (evt) {
     renderCard(photoName.value, photoLink.value);
     formPhotoElement.reset();
     closePopup(popupPhotoElement);
-});
-
-//Закрытие попапов
-popupCloseButtonElement.addEventListener('click', function () {
-    closePopup(popupElement);
-});
-
-popupPhotoElementCloseButton.addEventListener('click', function () {
-    closePopup(popupPhotoElement);
-});
-
-popupPhotoZoomClose.addEventListener('click', function () {
-    closePopup(openPopupPhotoZoom);
 });
