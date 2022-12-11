@@ -82,7 +82,7 @@ function closePopup(popupItem) {
 };
 
 //Функция отправки введенных в попап профиля 
-function handleProfileFormSubmit(evt) {
+    function handleProfileFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
     profileProfession.textContent = professionInput.value;
