@@ -13,13 +13,10 @@ import {
   popupElement,
   popupPhotoElement,
   enableValidation,
-  photoName,
-  photoLink,
   openPopupPhotoZoom,
   DeleteCard,
   updateAvatar,
   profileAvatar,
-  popupAvatarForm,
 } from '../utils/constants.js';
 import { FormValidation } from '../components/FormValidation.js';
 import PopupWithImage from '../components/PopupWithImage.js';
