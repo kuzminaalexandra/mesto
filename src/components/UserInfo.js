@@ -1,4 +1,5 @@
 export default class UserInfo {
+<<<<<<< HEAD
   constructor({ profileName, profileProfession, profileAvatar }) {
     this._profileName = profileName;
     this._profileProfession = profileProfession;
@@ -21,5 +22,19 @@ export default class UserInfo {
 
   updateAvatar(data) {
     this._profileAvatar.src = data['popup-avatar-edit'];
+=======
+  constructor({ profileName, profileProfession }) {
+    this._profileName = profileName;
+    this._profileProfession = profileProfession;
+  }
+
+  getUserInfo() {
+    return { name: this._profileName.textContent, profession: this._profileProfession.textContent };
+  }
+
+  setUserInfo(obj) {
+    this._profileName.textContent = obj['popup-profile-name'];
+    this._profileProfession.textContent = obj['popup-profile-profession'];
+>>>>>>> 7a5f24ee858667578486b4f7f00147096b8fd3c7
   }
 }

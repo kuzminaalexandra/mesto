@@ -15,10 +15,13 @@ export const photoName = popupPhotoElement.querySelector('#popup__photo-name');
 export const photoLink = popupPhotoElement.querySelector('#popup__photo-link');
 export const PopupText = openPopupPhotoZoom.querySelector('.popup__photo-subtitle');
 export const PhotoContent = document.querySelector('#popup-photo-content');
+<<<<<<< HEAD
 export const DeleteCard = document.querySelector('#popup-delete-card');
 export const updateAvatar = document.querySelector('#popup-avatar');
 export const profileAvatar = document.querySelector('.profile__avatar');
 export const popupAvatarForm = document.querySelector('#popup-avatar-edit');
+=======
+>>>>>>> 7a5f24ee858667578486b4f7f00147096b8fd3c7
 
 export const enableValidation = {
   formSelector: '.popup__content',
