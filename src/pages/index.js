@@ -158,7 +158,7 @@ function addCartByClickOnSubmit(obj) {
   api
     .generateCard(obj)
     .then((res) => {
-      photoCardsContainer.prepend(generateCard(res));
+      sectionCard.prependItem(generateCard(res));
       popupAddCard.close();
     })
     .catch((err) => {
